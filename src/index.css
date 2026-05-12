@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&family=JetBrains+Mono:wght@500;700;900&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-heading: var(--font-sans);
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+
+    --color-primary: #FFD700;
+    --color-foreground: #000000;
+    --color-background: #FFFFFF;
+    --color-success: #34d399;
+    --color-danger: #ef4444;
+    --color-neutral-muted: #9ca3af;
+    
+    --color-border: #000000;
+    --color-input: #000000;
+    --color-ring: #000000;
+    
+    --radius-none: 0px;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+    --radius-xl: 0px;
+    --radius-2xl: 0px;
+    --radius-3xl: 0px;
+    --radius-4xl: 0px;
+    --radius-window: 2rem;
+
+    --shadow-sm: 2px 2px 0px 0px rgba(0,0,0,1);
+    --shadow-md: 4px 4px 0px 0px rgba(0,0,0,1);
+    --shadow-lg: 6px 6px 0px 0px rgba(0,0,0,1);
+    --shadow-xl: 8px 8px 0px 0px rgba(0,0,0,1);
+    --shadow-2xl: 12px 12px 0px 0px rgba(0,0,0,1);
+
+    --transition-default: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground font-sans;
+    }
+  html {
+    @apply font-sans;
+    }
+}

@@ -1,0 +1,11 @@
+external-controller: 127.0.0.1:9090
+mixed-port: 7890
+proxies:
+  - name: p1
+    type: direct
+rules:
+  - DOMAIN-SUFFIX,github.com,p1
+  - MATCH,p1
+external-controller-cors:
+  allow-origins:
+    - '*'
